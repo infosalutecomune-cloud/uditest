@@ -1,0 +1,1 @@
+ALTER TABLE `leads` ADD `consensoCessione` boolean DEFAULT false NOT NULL;

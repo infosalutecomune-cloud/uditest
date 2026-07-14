@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1778075898106,
+      "tag": "0000_ambiguous_karma",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1778189825332,
+      "tag": "0001_lovely_the_order",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1778190174398,
+      "tag": "0002_acoustic_quicksilver",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1779380411009,
+      "tag": "0003_mature_doctor_octopus",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1779383413631,
+      "tag": "0004_cheerful_george_stacy",
+      "breakpoints": true
+    }
+  ]
+}

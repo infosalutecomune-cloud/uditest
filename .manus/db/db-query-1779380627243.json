@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO admin_users (email, passwordHash, nome, createdAt) \nVALUES ('ordini@acusticadimaio.it', '$2a$12$placeholder_will_be_replaced', 'Acustica Di Maio', NOW())\nON DUPLICATE KEY UPDATE nome = 'Acustica Di Maio';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2Kdg36wtWUxgyqq.39e64348ccd7 --database Me22qarDm3mR8w9fnb85wP --execute INSERT INTO admin_users (email, passwordHash, nome, createdAt) \nVALUES ('ordini@acusticadimaio.it', '$2a$12$placeholder_will_be_replaced', 'Acustica Di Maio', NOW())\nON DUPLICATE KEY UPDATE nome = 'Acustica Di Maio';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1167
+}

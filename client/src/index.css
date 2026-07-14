@@ -1,0 +1,307 @@
+/* ══════════════════════════════════════════════════════════
+   VoiceCheck — Design System: Medical Clarity
+   Brand: Acustica Di Maio
+   Palette: Blu #1E73BE, Bianco clinico, Nunito Sans
+   Target: Pazienti anziani 70-80 anni — accessibilità massima
+   ══════════════════════════════════════════════════════════ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1rem;
+  /* Brand Acustica Di Maio */
+  --brand-blue: #1E73BE;
+  --brand-blue-dark: #155A96;
+  --brand-blue-light: #5BA4E0;
+  --brand-blue-pale: #D6E9F8;
+  --brand-blue-bg: #EBF4FC;
+
+  /* Semantic colors */
+  --background: oklch(0.98 0.003 220);
+  --foreground: oklch(0.18 0.02 230);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 230);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 230);
+  --primary: oklch(0.47 0.14 240);
+  --primary-foreground: oklch(0.98 0.003 220);
+  --secondary: oklch(0.93 0.02 220);
+  --secondary-foreground: oklch(0.35 0.08 240);
+  --muted: oklch(0.94 0.01 220);
+  --muted-foreground: oklch(0.52 0.04 230);
+  --accent: oklch(0.91 0.04 220);
+  --accent-foreground: oklch(0.35 0.08 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.02 220);
+  --input: oklch(0.88 0.02 220);
+  --ring: oklch(0.47 0.14 240);
+  --chart-1: oklch(0.47 0.14 240);
+  --chart-2: oklch(0.62 0.12 240);
+  --chart-3: oklch(0.72 0.1 220);
+  --chart-4: oklch(0.55 0.18 150);
+  --chart-5: oklch(0.65 0.2 30);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.18 0.02 230);
+  --sidebar-primary: oklch(0.47 0.14 240);
+  --sidebar-primary-foreground: oklch(0.98 0.003 220);
+  --sidebar-accent: oklch(0.91 0.04 220);
+  --sidebar-accent-foreground: oklch(0.35 0.08 240);
+  --sidebar-border: oklch(0.88 0.02 220);
+  --sidebar-ring: oklch(0.47 0.14 240);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 480px; /* Mobile-first: max larghezza per app-like */
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+/* ── Animazione onda sonora ── */
+@keyframes soundwave {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(30, 115, 190, 0.4); }
+  50% { box-shadow: 0 0 0 20px rgba(30, 115, 190, 0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-soundwave { animation: soundwave 1s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulse-ring 1.5s ease-out infinite; }
+.animate-mic-pulse { animation: mic-pulse 1.5s ease-in-out infinite; }
+.animate-slide-in-right { animation: slide-in-right 0.35s ease-out; }
+.animate-slide-in-left { animation: slide-in-left 0.35s ease-out; }
+.animate-fade-in-up { animation: fade-in-up 0.4s ease-out; }
+
+/* ── Stili specifici app ── */
+.btn-primary {
+  background-color: #1E73BE;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  border: none;
+  box-shadow: 0 4px 14px rgba(30, 115, 190, 0.35);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #155A96;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(30, 115, 190, 0.45);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1E73BE;
+  border: 2px solid #1E73BE;
+  border-radius: 1rem;
+  padding: 0.875rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #EBF4FC;
+}
+
+.card-voicecheck {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(30, 115, 190, 0.08);
+  border: 1px solid #D6E9F8;
+}
+
+.header-blue {
+  background: linear-gradient(135deg, #1E73BE 0%, #155A96 100%);
+  color: white;
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.step-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #D6E9F8;
+  transition: all 0.3s;
+}
+
+.step-dot.active {
+  background-color: #1E73BE;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.step-dot.done {
+  background-color: #5BA4E0;
+}
+
+/* Soundwave bars */
+.soundwave-bar {
+  width: 4px;
+  border-radius: 2px;
+  background-color: #1E73BE;
+  animation: soundwave 1s ease-in-out infinite;
+}
+
+.soundwave-bar:nth-child(1) { animation-delay: 0s; height: 20px; }
+.soundwave-bar:nth-child(2) { animation-delay: 0.1s; height: 35px; }
+.soundwave-bar:nth-child(3) { animation-delay: 0.2s; height: 50px; }
+.soundwave-bar:nth-child(4) { animation-delay: 0.3s; height: 35px; }
+.soundwave-bar:nth-child(5) { animation-delay: 0.4s; height: 20px; }
+.soundwave-bar:nth-child(6) { animation-delay: 0.3s; height: 35px; }
+.soundwave-bar:nth-child(7) { animation-delay: 0.2s; height: 50px; }
+.soundwave-bar:nth-child(8) { animation-delay: 0.1s; height: 35px; }
+.soundwave-bar:nth-child(9) { animation-delay: 0s; height: 20px; }
+
+.soundwave-bar.inactive {
+  animation: none;
+  opacity: 0.25;
+}
+
+.soundwave-bar.red {
+  background-color: #EF4444;
+}

@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE admin_users SET passwordHash = '$2b$12$QchCs3jv5GblPRYsLYGZ2ej3XjAOb3JwZKKu8s6KB33pGTreM180y' WHERE email = 'ordini@acusticadimaio.it';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2Kdg36wtWUxgyqq.39e64348ccd7 --database Me22qarDm3mR8w9fnb85wP --execute UPDATE admin_users SET passwordHash = '$2b$12$QchCs3jv5GblPRYsLYGZ2ej3XjAOb3JwZKKu8s6KB33pGTreM180y' WHERE email = 'ordini@acusticadimaio.it';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 663
+}
