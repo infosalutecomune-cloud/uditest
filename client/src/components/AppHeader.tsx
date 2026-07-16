@@ -32,7 +32,7 @@ export default function AppHeader({ onBack, title, subtitle }: AppHeaderProps) {
           aria-label="Torna alla home"
         >
           <img
-            src="/manus-storage/logo_acustica_dimaio_b5729c4d.png"
+            src="/logo_acustica_dimaio_b5729c4d.png"
             alt="UdiTest — Acustica Di Maio"
             className="h-10 w-auto object-contain"
           />
