@@ -20,33 +20,12 @@ export default function Home() {
 
       {/* ── HEADER ── */}
       <div className="bg-white border-b border-[#D6E9F8] sticky top-0 z-50 shadow-sm">
-        <div className="flex items-center justify-between w-full max-w-[480px] mx-auto px-4 py-3">
+        <div className="flex items-center justify-center w-full max-w-[480px] mx-auto px-4 py-4">
           <img
             src="/logo_acustica_dimaio_b5729c4d.png"
             alt="Acustica Di Maio"
-            className="h-12 w-auto object-contain"
+            className="h-20 w-auto object-contain"
           />
-          <div className="flex items-center gap-2">
-            {/* Storico esami — visibile solo se l'utente ha già compilato i dati */}
-            {utenteCensito && (
-              <button
-                onClick={() => setStep('storico')}
-                className="relative flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all active:scale-95"
-                style={{ backgroundColor: storico.length > 0 ? '#EBF4FC' : '#F1F5F9' }}
-                title="Storico esami"
-              >
-                <History size={20} color={storico.length > 0 ? '#1E73BE' : '#94A3B8'} />
-                {storico.length > 0 && (
-                  <span
-                    className="absolute -top-1 -right-1 w-4 h-4 rounded-full text-white text-[10px] font-extrabold flex items-center justify-center"
-                    style={{ backgroundColor: '#1E73BE' }}
-                  >
-                    {storico.length > 9 ? '9+' : storico.length}
-                  </span>
-                )}
-              </button>
-            )}
-          </div>
         </div>
       </div>
 
