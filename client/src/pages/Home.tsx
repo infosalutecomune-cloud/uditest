@@ -22,7 +22,7 @@ export default function Home() {
       <div className="bg-white border-b border-[#D6E9F8] sticky top-0 z-50 shadow-sm">
         <div className="flex items-center justify-between w-full max-w-[480px] mx-auto px-4 py-3">
           <img
-            src="/manus-storage/logo_acustica_dimaio_b5729c4d.png"
+            src="/logo_acustica_dimaio_b5729c4d.png"
             alt="Acustica Di Maio"
             className="h-12 w-auto object-contain"
           />
